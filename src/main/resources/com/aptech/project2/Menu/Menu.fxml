@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<SplitPane fx:id="girdMenu" dividerPositions="0.24544792425345952" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aptech.project2.Controller.MainController">
+  <items>
+            <AnchorPane maxWidth="-Infinity" prefHeight="599" prefWidth="267" styleClass="herder" stylesheets="@../../../../static/css/MenuStyleSheet.css" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <AnchorPane layoutY="-1.0" prefHeight="154.0" prefWidth="266.0" stylesheets="@../../../../static/css/MenuStyleSheet.css">
+                     <children>
+                        <Label layoutX="32.0" layoutY="18.0" text="Sale Management System" textFill="WHITE">
+                           <font>
+                              <Font name="System Bold" size="16.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="txtAdminName" alignment="CENTER" layoutX="11.0" layoutY="119.0" prefHeight="26.0" prefWidth="238.0" textFill="WHITE">
+                           <font>
+                              <Font name="Arial Narrow Bold" size="15.0" />
+                           </font>
+                        </Label>
+                  <FontAwesomeIconView fill="WHITE" glyphName="USER" layoutX="109.0" layoutY="103.0" size="5em" />
+                     </children>
+                  </AnchorPane>
+                  <Button fx:id="btnMenuDashBroad" layoutX="30.0" layoutY="190.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="DASHBOARD" />
+                  <Button fx:id="btnMenuPurchase" layoutX="30.0" layoutY="248.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="PURCHASE" />
+                  <Button fx:id="btnMenuCategory" layoutX="30.0" layoutY="360.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="CATEGORY" />
+                  <Button fx:id="btnMenuProduct" layoutX="30.0" layoutY="417.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="PRODUCT" />
+            <Button fx:id="btnLogout" layoutX="87.0" layoutY="547.0" mnemonicParsing="false" onAction="#Logout" style="-fx-cursor: hand;" styleClass="radius" text="Logout">
+               <graphic>
+                        <FontAwesomeIconView fill="#b41152" glyphName="SIGN_OUT" size="2em" text="">
+                     <styleClass>
+                        <String fx:value="shadow" />
+                        <String fx:value="logout" />
+                        <String fx:value="logout" />
+                        <String fx:value="shadow" />
+                     </styleClass>
+                  </FontAwesomeIconView>
+               </graphic>
+               <font>
+                  <Font name="Arial Nova Bold" size="12.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnMenuStaff" layoutX="30.0" layoutY="477.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="STAFF" />
+            <Button fx:id="btnMenuOrder" layoutX="30.0" layoutY="303.0" mnemonicParsing="false" prefHeight="40.0" prefWidth="210.0" styleClass="nav-btn" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="ORDERS" />
+               </children>
+            </AnchorPane>
+        
+    <AnchorPane prefHeight="599.0" prefWidth="833.0" />
+  </items>
+</SplitPane>

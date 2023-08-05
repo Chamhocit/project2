@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="599.0" prefWidth="833.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aptech.project2.Controller.CategoryController">
+   <children>
+      <VBox layoutX="22.0" layoutY="28.0" prefHeight="102.0" prefWidth="110.0" spacing="15.0">
+         <children>
+            <Label prefHeight="20.0" prefWidth="27.0" text="ID:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label prefHeight="20.0" prefWidth="60.0" text="Name:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label text="Parent Category:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="10.0" layoutY="80.0" prefHeight="20.0" prefWidth="92.0" text="Create Date:">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </VBox>
+      <VBox layoutX="142.0" layoutY="28.0" prefHeight="109.0" prefWidth="191.0" spacing="8.0">
+         <children>
+            <TextField fx:id="txtId" />
+            <TextField fx:id="txtName" layoutX="10.0" layoutY="10.0" />
+            <ComboBox fx:id="comBoxParentCat" prefHeight="26.0" prefWidth="210.0" promptText="Choose Parent Category" />
+            
+         </children>
+      </VBox>
+      <TableView fx:id="tableCat" layoutX="349.0" layoutY="28.0" prefHeight="556.0" prefWidth="474.0" AnchorPane.bottomAnchor="15.0" AnchorPane.leftAnchor="349.0" AnchorPane.rightAnchor="9.600000000000023" AnchorPane.topAnchor="28.0">
+        <columns>
+          <TableColumn fx:id="columnId" prefWidth="63.20001220703125" text="ID" />
+          <TableColumn fx:id="columnName" prefWidth="144.0" text="Name" />
+            <TableColumn fx:id="columnParentCat" prefWidth="129.60003662109375" text="Parent Category" />
+            <TableColumn fx:id="columCreateDate" prefWidth="134.40006103515623" text="Create Date" />
+        </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Button fx:id="btnInsert" layoutX="13.0" layoutY="198.0" mnemonicParsing="false" onAction="#setBtnInsert" prefHeight="26.0" prefWidth="73.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="Insert">
+         <styleClass>
+            <String fx:value="nav-btn" />
+            <String fx:value="btn" />
+         </styleClass></Button>
+      <Button fx:id="btnDelete" layoutX="262.0" layoutY="198.0" mnemonicParsing="false" onAction="#setBtnDelete" prefHeight="26.0" prefWidth="74.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="Delete">
+         <styleClass>
+            <String fx:value="nav-btn" />
+            <String fx:value="btn" />
+         </styleClass></Button>
+      <Button fx:id="btnUpdate" layoutX="178.0" layoutY="198.0" mnemonicParsing="false" onAction="#setBtnUpdate" prefHeight="26.0" prefWidth="74.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="Update">
+         <styleClass>
+            <String fx:value="nav-btn" />
+            <String fx:value="btn" />
+         </styleClass></Button>
+      <DatePicker fx:id="txtCreateDate" editable="false" layoutX="142.0" layoutY="132.0" prefHeight="26.0" prefWidth="191.0" />
+      <Button fx:id="btnClear" layoutX="97.0" layoutY="198.0" mnemonicParsing="false" onAction="#setBtnClear" prefHeight="26.0" prefWidth="73.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" text="Clear">
+         <styleClass>
+            <String fx:value="nav-btn" />
+            <String fx:value="btn" />
+         </styleClass>
+      </Button>
+      <Label fx:id="txtMessage" layoutX="22.0" layoutY="261.0" prefHeight="18.0" prefWidth="308.0" textFill="#f70202">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Label>
+   </children>
+   <styleClass>
+      <String fx:value="radius" />
+      <String fx:value="white-bg" />
+      <String fx:value="shadow" />
+      <String fx:value="radius" />
+   </styleClass>
+</AnchorPane>

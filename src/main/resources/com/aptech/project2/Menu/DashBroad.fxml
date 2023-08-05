@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import java.lang.String?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="599.0" prefWidth="833" AnchorPane.bottomAnchor="14.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="0.39999999999997726" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aptech.project2.Controller.DashBoardController">
+    <children>
+        <AnchorPane layoutX="6.0" layoutY="7.0" prefHeight="154.0" prefWidth="816.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="14.0">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+                <String fx:value="radius" />
+            </styleClass>
+         <children>
+                    <AnchorPane layoutX="31.0" layoutY="19.0" prefHeight="114.0" prefWidth="206.0" stylesheets="@../../../../static/css/MenuStyleSheet.css">
+                        <children>
+                            <FontAwesomeIconView fill="WHITE" glyphName="SHOPPING_CART" layoutX="14.0" layoutY="61.0" size="5em" />
+                            <Label layoutX="88.0" layoutY="74.0" text="Orders" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="txtOrder" layoutX="115.0" layoutY="12.0" prefHeight="26.0" prefWidth="88.0" text="0" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <styleClass>
+                            <String fx:value="radius" />
+                            <String fx:value="herder" />
+                        </styleClass>
+                    </AnchorPane>
+                    <AnchorPane layoutX="298.0" layoutY="19.0" prefHeight="114.0" prefWidth="216.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" AnchorPane.bottomAnchor="21.0" AnchorPane.topAnchor="19.0">
+                        <children>
+                            <FontAwesomeIconView fill="WHITE" glyphName="DOLLAR" layoutX="14.0" layoutY="61.0" size="5em" />
+                            <Label layoutX="57.0" layoutY="74.0" prefHeight="26.0" prefWidth="129.0" text="Today's income" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="txtIncome" layoutX="107.0" layoutY="14.0" prefHeight="26.0" prefWidth="102.0" text="0" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <styleClass>
+                            <String fx:value="radius" />
+                            <String fx:value="herder" />
+                        </styleClass>
+                    </AnchorPane>
+                    <AnchorPane layoutX="581.0" layoutY="20.0" prefHeight="113.0" prefWidth="200.0" stylesheets="@../../../../static/css/MenuStyleSheet.css">
+                        <children>
+                            <FontAwesomeIconView fill="WHITE" glyphName="APPLE" layoutX="20.0" layoutY="64.0" size="5em" />
+                            <Label layoutX="106.0" layoutY="74.0" text="Products" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                            <Label fx:id="txtProduct" layoutX="112.0" layoutY="14.0" prefHeight="26.0" prefWidth="78.0" text="0" textFill="WHITE">
+                                <font>
+                                    <Font name="System Bold" size="16.0" />
+                                </font>
+                            </Label>
+                        </children>
+                        <styleClass>
+                            <String fx:value="radius" />
+                            <String fx:value="herder" />
+                        </styleClass>
+                    </AnchorPane>
+         </children>
+        </AnchorPane>
+        <AnchorPane fx:id="anchoiceParent" layoutX="8.0" layoutY="181.0" prefHeight="415.0" prefWidth="806.0" stylesheets="@../../../../static/css/MenuStyleSheet.css" AnchorPane.bottomAnchor="3.0" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="13.0" AnchorPane.topAnchor="181.0">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow" />
+                <String fx:value="radius" />
+            </styleClass>
+            <children>
+                  <AreaChart fx:id="chartIncome" layoutX="5.0" layoutY="4.0" prefHeight="400.0" prefWidth="793.0" title="Day Income's Chart" AnchorPane.bottomAnchor="11.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="8.0" AnchorPane.topAnchor="4.0">
+                      <xAxis>
+                          <CategoryAxis side="BOTTOM" />
+                      </xAxis>
+                      <yAxis>
+                          <NumberAxis side="LEFT" />
+                      </yAxis>
+                  </AreaChart>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
